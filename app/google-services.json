@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "772074902596",
+    "project_id": "ttlp-411c0",
+    "storage_bucket": "ttlp-411c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772074902596:android:801d05864c711f0c0dd811",
+        "android_client_info": {
+          "package_name": "com.Estancia2.ttl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772074902596-4da2ekmk3s84lpeqhvgplp2ejlnjndgr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Estancia2.ttl",
+            "certificate_hash": "699ecbc31bb91bb82a45c4ce70c82784d482de62"
+          }
+        },
+        {
+          "client_id": "772074902596-a851rat0v7hd0m656up5mtmgmv2m1rt9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu4sVk1yg8GKyuVKtxPwUAYvQMvedTkyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772074902596-a851rat0v7hd0m656up5mtmgmv2m1rt9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
