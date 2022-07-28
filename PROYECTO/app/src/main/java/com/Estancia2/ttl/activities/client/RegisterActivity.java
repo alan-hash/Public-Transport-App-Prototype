@@ -33,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
     Button mButtonRegister;
     TextInputEditText mTextInputEmail;
     TextInputEditText mTextInputName;
+    TextInputEditText mTextInputPhone;
     TextInputEditText mTextInputPassword;
     AlertDialog mDialog;
 
@@ -50,7 +51,9 @@ public class RegisterActivity extends AppCompatActivity {
         mButtonRegister=findViewById(R.id.btnRegister);
         mTextInputEmail=findViewById(R.id.textInputEmail);
         mTextInputName=findViewById(R.id.textInputName);
+        mTextInputPhone=findViewById(R.id.textInputPhone);
         mTextInputPassword=findViewById(R.id.textInputPassword);
+
 
         mButtonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,13 +65,14 @@ public class RegisterActivity extends AppCompatActivity {
 
     void clickRegister(){
         final String name=mTextInputName.getText().toString();
+        final String phone=mTextInputPhone.getText().toString();
         final String email=mTextInputEmail.getText().toString();
         final String password=mTextInputPassword.getText().toString();
 
-        if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()){
+        if (!name.isEmpty()  && !phone.isEmpty() && !email.isEmpty() && !password.isEmpty()){
             if (password.length() >= 6){
                 mDialog.show();
-                register(name,email,password);
+                register(name,phone,email,password);
 
 
             }
@@ -80,14 +84,14 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(this, "Ingresa todos los campos", Toast.LENGTH_SHORT).show();
         }
     }
-    void register(final String name, String email,String password){
+    void register(final String name, String phone, String email,String password){
         mAuthProvider.register(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 mDialog.hide();
                 if (task.isSuccessful()){
                     String id=FirebaseAuth.getInstance().getCurrentUser().getUid();
-                    Client client=new Client(id,name,email);
+                    Client client=new Client(id,name,phone,email);
                     create(client);
                 }
                 else {
@@ -96,8 +100,6 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
-
-
 
 
     void  create(Client client){
