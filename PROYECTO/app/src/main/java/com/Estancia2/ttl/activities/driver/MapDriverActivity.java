@@ -337,6 +337,10 @@ public class MapDriverActivity extends AppCompatActivity implements OnMapReadyCa
         if (item.getItemId() == R.id.action_logout) {
             logout();
         }
+        if (item.getItemId() == R.id.action_update) {
+            Intent intent=new Intent(MapDriverActivity.this, UpdateProfileDriverActivity.class);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
     }
 

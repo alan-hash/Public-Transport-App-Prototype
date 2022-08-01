@@ -36,7 +36,7 @@ public class RegisterDriverActivity extends AppCompatActivity {
     Button mButtonRegister;
     TextInputEditText mTextInputEmail;
     TextInputEditText mTextInputName;
-    TextInputEditText mTextInputVehicleName;
+    TextInputEditText mTextInputPhone;
     TextInputEditText getmTextInputVehiclePlate;
     TextInputEditText mTextInputPassword;
     AlertDialog mDialog;
@@ -55,7 +55,7 @@ public class RegisterDriverActivity extends AppCompatActivity {
         mButtonRegister=findViewById(R.id.btnRegister);
         mTextInputEmail=findViewById(R.id.textInputEmail);
         mTextInputName=findViewById(R.id.textInputName);
-        mTextInputVehicleName=findViewById(R.id.textInputVehicleName);
+        mTextInputPhone=findViewById(R.id.textInputPhone);
         getmTextInputVehiclePlate=findViewById(R.id.textInputVehiclePlate);
         mTextInputPassword=findViewById(R.id.textInputPassword);
 
@@ -69,15 +69,15 @@ public class RegisterDriverActivity extends AppCompatActivity {
 
     void clickRegister(){
         final String name=mTextInputName.getText().toString();
+        final String phone=mTextInputPhone.getText().toString();
         final String email=mTextInputEmail.getText().toString();
-        final String vehicleName=mTextInputVehicleName.getText().toString();
         final String vehiclePlate=getmTextInputVehiclePlate.getText().toString();
         final String password=mTextInputPassword.getText().toString();
 
-        if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty() && !vehicleName.isEmpty() && !vehiclePlate.isEmpty()){
+        if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty() && !phone.isEmpty() && !vehiclePlate.isEmpty()){
             if (password.length() >= 6){
                 mDialog.show();
-                register(name,email,password,vehicleName,vehiclePlate);
+                register(name,phone,email,password,vehiclePlate);
             }
             else {
                 Toast.makeText(this, "La contraseña debe de tener minimo 6 caracteres", Toast.LENGTH_SHORT).show();
@@ -87,14 +87,14 @@ public class RegisterDriverActivity extends AppCompatActivity {
             Toast.makeText(this, "Ingresa todos los campos", Toast.LENGTH_SHORT).show();
         }
     }
-    void register(final String name, String email,String password,String vehicleName,String vehiclePlate){
+    void register(final String name,String vehicleName,String email,String password,String vehiclePlate){
         mAuthProvider.register(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 mDialog.hide();
                 if (task.isSuccessful()){
                     String id= FirebaseAuth.getInstance().getCurrentUser().getUid();
-                    Driver driver=new Driver(id,name,email,vehicleName,vehiclePlate);
+                    Driver driver=new Driver(id,name,vehicleName,email,vehiclePlate);
                     create(driver);
                 }
                 else {

@@ -3,14 +3,13 @@ package com.Estancia2.ttl.models;
 public class Client {
     String id;
     String name;
-    String email;
     String phone;
-    String image;
+    String email;
+
+
 
     public  Client(){
-
     }
-
 
     public Client(String id, String name, String phone,String email) {
         this.id = id;
@@ -20,20 +19,12 @@ public class Client {
 
     }
 
-    public Client(String id, String name, String email, String phone, String image) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
         this.phone = phone;
-        this.image = image;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 
     public String getId() {
@@ -53,13 +44,6 @@ public class Client {
     }
 
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
 
 
     public String getEmail() {

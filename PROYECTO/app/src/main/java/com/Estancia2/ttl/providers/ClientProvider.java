@@ -19,7 +19,7 @@ public class ClientProvider {
         Map<String,Object> map=new HashMap<>();
 
         map.put("name",client.getName());
-        map.put("Phone",client.getPhone());
+        map.put("phone",client.getPhone());
         map.put("email",client.getEmail());
 
         return mDatabase.child(client.getId()).setValue(map);
@@ -30,12 +30,9 @@ public class ClientProvider {
         Map<String, Object> map = new HashMap<>();
         map.put("name", client.getName());
         map.put("phone", client.getPhone());
-        map.put("image", client.getImage());
 
         return mDatabase.child(client.getId()).updateChildren(map);
     }
-
-
 
 
     public DatabaseReference getClient(String idClient){return mDatabase.child(idClient);}

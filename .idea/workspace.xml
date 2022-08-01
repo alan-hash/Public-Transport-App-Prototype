@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="597fb51f-e0de-425d-9a77-1ce85d1fb28a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/PROYECTO/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROYECTO/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROYECTO/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROYECTO/app/src/main/java/com/Estancia2/ttl/activities/client/UpdateProfileActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO/app/src/main/java/com/Estancia2/ttl/activities/client/UpdateProfileActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROYECTO/app/src/main/java/com/Estancia2/ttl/activities/driver/RegisterDriverActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO/app/src/main/java/com/Estancia2/ttl/activities/driver/RegisterDriverActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROYECTO/app/src/main/java/com/Estancia2/ttl/models/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO/app/src/main/java/com/Estancia2/ttl/models/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROYECTO/app/src/main/res/layout/activity_register_driver.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PROYECTO/app/src/main/res/layout/activity_register_driver.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2CjzRYVeAEBjycY9h1RxTGTJpj5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PROYECTO" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="597fb51f-e0de-425d-9a77-1ce85d1fb28a" name="Default Changelist" comment="" />
+      <created>1659330773753</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659330773753</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1826" y="118" key="FileChooserDialogImpl" timestamp="1659330805020">
+      <screen x="1366" y="0" width="1360" height="728" />
+    </state>
+    <state x="1826" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1360.728@1366.0.1360.728" timestamp="1659330805020" />
+  </component>
+</project>

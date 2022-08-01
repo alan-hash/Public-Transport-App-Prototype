@@ -17,7 +17,11 @@
         <activity
             android:name=".activities.client.UpdateProfileActivity"
             android:parentActivityName=".activities.client.MapClientActivity"
-            android:exported="true" />
+            android:exported="false" />
+        <activity
+            android:name=".activities.driver.UpdateProfileDriverActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.driver.MapDriverActivity" />
         <activity
             android:name=".activities.client.NotificationBookingActivity"
             android:exported="false" />

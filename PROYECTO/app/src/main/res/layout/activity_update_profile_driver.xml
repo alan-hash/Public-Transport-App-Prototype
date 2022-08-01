@@ -5,15 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activities.driver.RegisterDriverActivity">
-    <include layout="@layout/action_bar_tollbar"></include>
+    tools:context=".activities.client.UpdateProfileActivity">
 
+
+
+    <include layout="@layout/action_bar_tollbar" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         >
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/driver" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,6 +57,7 @@
             android:orientation="horizontal"
             android:layout_margin="10dp">
             <ImageView
+                android:id="@+id/imageViewProfile"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="10dp"
@@ -56,17 +65,20 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textInputPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Numero de Telefono"
-                    android:inputType="textEmailAddress" >
+                    android:inputType="text" >
                 </com.google.android.material.textfield.TextInputEditText>
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -94,71 +106,19 @@
         </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/icono_email"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Correo Electronico"
-                    android:inputType="textEmailAddress" >
-                </com.google.android.material.textfield.TextInputEditText>
-
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/icono_password"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Contraseña"
-                    android:inputType="textPassword" >
-                </com.google.android.material.textfield.TextInputEditText>
-
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="bottom">
-            <Button
-                android:id="@+id/btnRegister"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Registrar"
-                android:background="@drawable/rounded_button"
-                android:backgroundTint="@color/colorprimary"
-                android:layout_margin="30dp"
-                android:textColor="@color/white"/>
-        </LinearLayout>
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnUpdateProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ACTUALIZAR PERFIL"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/colorprimaryDark"
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        android:textColor="@color/white" />
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

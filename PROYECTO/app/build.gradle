@@ -55,7 +55,9 @@ dependencies {
 
 
     implementation 'com.google.firebase:firebase-storage:19.1.1'
-    implementation 'id.zelory:compressor:2.1.1'
+    implementation('id.zelory:compressor:2.1.0') {
+        exclude module: 'unspecified'
+    }
 
 }
 apply plugin: 'com.google.gms.google-services'
