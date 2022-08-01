@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/109141/Documents/GitHub/Public-Transport-App-Prototype/PROYECTO/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/109141/Documents/GitHub/Public-Transport-App-Prototype/PROYECTO/app/src/main/res/layout/activity_map_client.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/109141/Documents/GitHub/Public-Transport-App-Prototype/PROYECTO/app/src/main/res/layout/activity_map_driver.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/109141/Documents/GitHub/Public-Transport-App-Prototype/PROYECTO/app/src/main/res/layout/activity_register.xml" value="0.33024431339511373" />
@@ -11,6 +12,8 @@
         <entry key="..\:/Users/109141/Documents/GitHub/Public-Transport-App-Prototype/PROYECTO/app/src/main/res/layout/activity_select_option_auth.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/109141/Documents/GitHub/Public-Transport-App-Prototype/PROYECTO/app/src/main/res/layout/activity_update_profile.xml" value="0.33" />
         <entry key="..\:/Users/109141/Documents/GitHub/Public-Transport-App-Prototype/PROYECTO/app/src/main/res/layout/activity_update_profile2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/109141/Documents/GitHub/Public-Transport-App-Prototype/PROYECTO/app/src/main/res/layout/ejemplo.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/109141/Documents/GitHub/Public-Transport-App-Prototype/PROYECTO/app/src/main/res/menu/client_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/109141/OneDrive/Documentos/PROYECTO/app/src/main/res/drawable/rounded_button.xml" value="0.2203125" />
         <entry key="..\:/Users/109141/OneDrive/Documentos/PROYECTO/app/src/main/res/layout/action_bar_tollbar.xml" value="0.1" />
         <entry key="..\:/Users/109141/OneDrive/Documentos/PROYECTO/app/src/main/res/layout/action_bar_toollbar.xml" value="0.20416666666666666" />

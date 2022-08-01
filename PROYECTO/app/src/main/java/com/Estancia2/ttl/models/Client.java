@@ -5,6 +5,11 @@ public class Client {
     String name;
     String email;
     String phone;
+    String image;
+
+    public  Client(){
+
+    }
 
 
     public Client(String id, String name, String phone,String email) {
@@ -13,6 +18,22 @@ public class Client {
         this.phone= phone;
         this.email = email;
 
+    }
+
+    public Client(String id, String name, String email, String phone, String image) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.image = image;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getId() {
