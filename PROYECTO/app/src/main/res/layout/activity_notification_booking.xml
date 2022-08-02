@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/colorWhite"
 
     tools:context=".activities.client.NotificationBookingActivity">
     <LinearLayout
@@ -33,6 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Huitzila"
+            android:textColor="@color/black"
 
             android:textAlignment="center"
             android:textSize="17sp"
@@ -52,7 +54,8 @@
             android:text="Tizayuca"
             android:textAlignment="center"
             android:textSize="17sp"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,7 +78,9 @@
                     android:id="@+id/textViewMin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0min" />
+                    android:text="0min"
+                    android:textColor="@color/black"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -95,7 +100,8 @@
                     android:id="@+id/textViewDistance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0km" />
+                    android:text="0km"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
         </LinearLayout>
