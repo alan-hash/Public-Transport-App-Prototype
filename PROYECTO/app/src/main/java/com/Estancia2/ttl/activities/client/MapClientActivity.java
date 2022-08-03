@@ -15,10 +15,13 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
 
+import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.Menu;
@@ -95,13 +98,15 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
     private LatLng mOriginLatLng;
     private LatLng mDestinationLatLng;
     private LatLng mOriginDriver;
-    private LatLng mOriginClient;
 
 
     private List<LatLng> mPolylineList;
     private PolylineOptions mPolylineOptions;
 
-
+    //Sensores
+    private Vibrator vibrator;
+    private SoundPool soundPool;
+    private int[]sonidos=new int[1];
 
 
 
@@ -151,37 +156,36 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
         setContentView(R.layout.activity_map_client);
         MyToolbar.show(this, "Pasajero", false);
 
-
-
         mAuthProvider = new AuthProvider();
         mGeofireProvider= new GeofireProvider("active_drivers");
-
-
         mFusedLocation = LocationServices.getFusedLocationProviderClient(this);
-
         mMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mButtonRequestInfo=findViewById(R.id.btnRequestInfo);
-
-        //
-
         mOriginLatLng=new LatLng( 19.815707283695566, -98.95651848788431);
         mDestinationLatLng=new LatLng(19.8248712062147,-98.97743782479284);
-
-
-
-
-
         mGoogleApiProvider=new GoogleApiProvider(MapClientActivity.this);
         mMapFragment.getMapAsync(this);
+
+        //Sensores
+        vibrator=(Vibrator)getSystemService(VIBRATOR_SERVICE);
+        if(Build.VERSION.SDK_INT==Build.VERSION_CODES.LOLLIPOP){
+            soundPool=new SoundPool.Builder().setMaxStreams(1).build();
+        }else {
+            soundPool=new SoundPool(1, AudioManager.STREAM_MUSIC,1);
+        }
+
+        //CARGAMOS LOS SONIDOS
+        sonidos[0]=soundPool.load(this,R.raw.btninfo,1);
 
 
         //accion para mostra info
         mButtonRequestInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                soundPool.play(sonidos[0],1,1,1,0,1 );
+               vibrator.vibrate(100);
                 requestInfo();
                 distance();
-
             }
         });
 

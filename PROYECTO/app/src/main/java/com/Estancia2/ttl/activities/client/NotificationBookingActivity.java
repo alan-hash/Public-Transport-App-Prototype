@@ -36,12 +36,8 @@ public class NotificationBookingActivity extends AppCompatActivity {
     private TextView mTextViewCounter;
     private Button mButtonAccept;
     private String mExtraIdDriver;
-
-
     private String mExtraMin;
     private String mExtraDistance;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +46,8 @@ public class NotificationBookingActivity extends AppCompatActivity {
         mTextViewMin = findViewById(R.id.textViewMin);
         mTextViewDistance = findViewById(R.id.textViewDistance);
         mButtonAccept = findViewById(R.id.btnAccept);
-
-
         mExtraMin = getIntent().getStringExtra("min");
         mExtraDistance = getIntent().getStringExtra("distance");
-
-
         mTextViewMin.setText(mExtraMin);
         mTextViewDistance.setText(mExtraDistance);
 
@@ -65,18 +57,10 @@ public class NotificationBookingActivity extends AppCompatActivity {
                 acceptBooking();
             }
         });
-
-
-
     }
 
-
-
-
     private void acceptBooking() {
-
         Intent intent = new Intent(NotificationBookingActivity.this, MapClientActivity.class);
         startActivity(intent);
     }
-
-    }
+}

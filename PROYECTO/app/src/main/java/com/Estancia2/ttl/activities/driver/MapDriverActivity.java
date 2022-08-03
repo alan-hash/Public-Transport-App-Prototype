@@ -8,9 +8,12 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
+import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.Menu;
@@ -79,6 +82,12 @@ public class MapDriverActivity extends AppCompatActivity implements OnMapReadyCa
     private PolylineOptions mPolylineOptions;
     private GoogleApiProvider mGoogleApiProvider;
 
+    //Sensores
+    private Vibrator vibrator;
+    private SoundPool soundPool;
+    private int[]sonidos=new int[2];
+
+
 
     LocationCallback mLocationCallback = new LocationCallback() {
         @Override
@@ -130,16 +139,37 @@ public class MapDriverActivity extends AppCompatActivity implements OnMapReadyCa
         mMapFragment.getMapAsync(this);
         mButtonConnect=findViewById(R.id.btnConnect);
         mGoogleApiProvider=new GoogleApiProvider(MapDriverActivity.this);
+
+
+        //Sensores
+        vibrator=(Vibrator)getSystemService(VIBRATOR_SERVICE);
+        if(Build.VERSION.SDK_INT==Build.VERSION_CODES.LOLLIPOP){
+            soundPool=new SoundPool.Builder().setMaxStreams(1).build();
+        }else {
+            soundPool=new SoundPool(1, AudioManager.STREAM_MUSIC,1);
+        }
+
+        //CARGAMOS LOS SONIDOS
+        sonidos[0]=soundPool.load(this,R.raw.ubicacion,1);
+        sonidos[1]=soundPool.load(this,R.raw.btnfinal,1);
+
+
+
+
         mButtonConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                vibrator.vibrate(100);
                 if (mIsConnect){
                     disconnect();
+                    soundPool.play(sonidos[1],1,1,1,0,1 );
+
                 }
                 else{
                     startLocation();
-                }
+                    soundPool.play(sonidos[0],1,1,1,0,1 );
 
+                }
             }
         });
 
