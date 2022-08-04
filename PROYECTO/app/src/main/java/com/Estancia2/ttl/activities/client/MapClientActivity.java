@@ -361,8 +361,8 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         mLocationRequest.setSmallestDisplacement(5);
 
-        mMap.addMarker(new MarkerOptions().position(mOriginLatLng).title("ORIGEN").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_pinblue)));
-        mMap.addMarker(new MarkerOptions().position(mDestinationLatLng).title("Destino").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_pinred)));
+        mMap.addMarker(new MarkerOptions().position(mOriginLatLng).title("Destino").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_pinblue)));
+        mMap.addMarker(new MarkerOptions().position(mDestinationLatLng).title("ORIGEN").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_pinred)));
 
 
         startLocation();

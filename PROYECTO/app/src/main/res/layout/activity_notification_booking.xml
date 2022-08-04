@@ -25,15 +25,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Desde"
+            android:textStyle="bold"
             android:textAlignment="center"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textColor="@android:color/black"
             android:layout_marginTop="20dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Huitzila"
+            android:text="Tizayuca "
             android:textColor="@color/black"
 
             android:textAlignment="center"
@@ -43,15 +44,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hasta"
+            android:textStyle="bold"
             android:textAlignment="center"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textColor="@android:color/black"
             android:layout_marginTop="20dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tizayuca"
+            android:text="Huitzila"
             android:textAlignment="center"
             android:textSize="17sp"
             android:layout_marginTop="5dp"
@@ -72,6 +74,7 @@
                     android:layout_height="wrap_content"
                     android:text="Tiempo de llegada"
                     android:textSize="18sp"
+                    android:textStyle="bold"
                     android:textColor="@color/black"
                     />
                 <TextView
@@ -93,6 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Distancia"
+                    android:textStyle="bold"
                     android:textSize="18sp"
                     android:textColor="@color/black"
                     />

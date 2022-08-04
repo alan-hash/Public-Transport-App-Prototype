@@ -194,7 +194,7 @@ public class MapDriverActivity extends AppCompatActivity implements OnMapReadyCa
                     String points = polylines.getString("points");
                     mPolylineList = DecodePoints.decodePoly(points);
                     mPolylineOptions = new PolylineOptions();
-                    mPolylineOptions.color(Color.DKGRAY);
+                    mPolylineOptions.color(Color.GREEN);
                     mPolylineOptions.width(17f);
                     mPolylineOptions.startCap(new SquareCap());
                     mPolylineOptions.jointType(JointType.ROUND);
@@ -225,8 +225,8 @@ public class MapDriverActivity extends AppCompatActivity implements OnMapReadyCa
         mLocationRequest.setFastestInterval(1000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         mLocationRequest.setSmallestDisplacement(5);
-        mMap.addMarker(new MarkerOptions().position(mOriginLatLng).title("ORIGEN").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_pinblue)));
-        mMap.addMarker(new MarkerOptions().position(mDestinationLatLng).title("Destino").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_pinred)));
+        mMap.addMarker(new MarkerOptions().position(mOriginLatLng).title("Destino ").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_pinblue)));
+        mMap.addMarker(new MarkerOptions().position(mDestinationLatLng).title("ORIGEN").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_pinred)));
         drawRoute();
     }
 
