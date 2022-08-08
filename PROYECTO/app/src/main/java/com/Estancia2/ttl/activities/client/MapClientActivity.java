@@ -129,7 +129,6 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
 
                     );
 
-
                     // OBTENER LA LOCALIZACION DEL USUARIO EN TIEMPO REAL
                     mMap.moveCamera(CameraUpdateFactory.newCameraPosition(
                             new CameraPosition.Builder()
@@ -205,7 +204,7 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
                     String points = polylines.getString("points");
                     mPolylineList = DecodePoints.decodePoly(points);
                     mPolylineOptions = new PolylineOptions();
-                    mPolylineOptions.color(Color.MAGENTA);
+                    mPolylineOptions.color(0xff2196F3);
                     mPolylineOptions.width(16f);
                     mPolylineOptions.startCap(new SquareCap());
                     mPolylineOptions.jointType(JointType.ROUND);
@@ -364,11 +363,8 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions().position(mOriginLatLng).title("Destino").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_pinblue)));
         mMap.addMarker(new MarkerOptions().position(mDestinationLatLng).title("ORIGEN").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_pinred)));
 
-
         startLocation();
         drawRoute();
-
-
     }
 
 
@@ -380,6 +376,7 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
                 if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                     if (gpsActived()) {
                         mFusedLocation.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
+                        mMap.setMyLocationEnabled(true);
                     } else {
                         showAlertDialogNOGPS();
                     }
@@ -401,6 +398,7 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
                 return;
             }
             mFusedLocation.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
+            mMap.setMyLocationEnabled(true);
         }
         else  if (requestCode == SETTINGS_REQUEST_CODE && gpsActived()){
             showAlertDialogNOGPS();
@@ -433,6 +431,7 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 if (gpsActived()) {
                     mFusedLocation.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
+                    mMap.setMyLocationEnabled(true);
                 }
                 else {
                     showAlertDialogNOGPS();
@@ -444,6 +443,7 @@ public class MapClientActivity extends AppCompatActivity implements OnMapReadyCa
         } else {
             if (gpsActived()) {
                 mFusedLocation.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
+                mMap.setMyLocationEnabled(true);
             }
             else {
                 showAlertDialogNOGPS();

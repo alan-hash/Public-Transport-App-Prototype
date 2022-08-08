@@ -167,7 +167,7 @@ public class MapDriverActivity extends AppCompatActivity implements OnMapReadyCa
                 }
                 else{
                     startLocation();
-                    soundPool.play(sonidos[0],1,1,1,0,1 );
+
 
                 }
             }
@@ -194,7 +194,7 @@ public class MapDriverActivity extends AppCompatActivity implements OnMapReadyCa
                     String points = polylines.getString("points");
                     mPolylineList = DecodePoints.decodePoly(points);
                     mPolylineOptions = new PolylineOptions();
-                    mPolylineOptions.color(Color.GREEN);
+                    mPolylineOptions.color(0xff2196F3);
                     mPolylineOptions.width(17f);
                     mPolylineOptions.startCap(new SquareCap());
                     mPolylineOptions.jointType(JointType.ROUND);
@@ -238,7 +238,7 @@ public class MapDriverActivity extends AppCompatActivity implements OnMapReadyCa
                 if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                     if (gpsActived()) {
                         mFusedLocation.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
-                        mMap.setMyLocationEnabled(false);
+                        mMap.setMyLocationEnabled(true);
                     } else {
                         showAlertDialogNOGPS();
                     }
@@ -261,7 +261,7 @@ public class MapDriverActivity extends AppCompatActivity implements OnMapReadyCa
                 return;
             }
             mFusedLocation.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
-            mMap.setMyLocationEnabled(false);
+            mMap.setMyLocationEnabled(true);
         }
         else {
             showAlertDialogNOGPS();
@@ -310,10 +310,11 @@ public class MapDriverActivity extends AppCompatActivity implements OnMapReadyCa
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 if (gpsActived()) {
+                    soundPool.play(sonidos[0],1,1,1,0,1 );
                     mButtonConnect.setText("Desconectarce");
                     mIsConnect=true;
                     mFusedLocation.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
-                    mMap.setMyLocationEnabled(false);
+                    mMap.setMyLocationEnabled(true);
                 }
                 else {
                     showAlertDialogNOGPS();
@@ -325,7 +326,7 @@ public class MapDriverActivity extends AppCompatActivity implements OnMapReadyCa
         } else {
             if (gpsActived()) {
                 mFusedLocation.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
-                mMap.setMyLocationEnabled(false);
+                mMap.setMyLocationEnabled(true);
             }
             else {
                 showAlertDialogNOGPS();

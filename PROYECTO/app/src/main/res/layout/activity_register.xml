@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/colorWhite"
     tools:context=".activities.client.RegisterActivity">
     <include layout="@layout/action_bar_tollbar"></include>
 
@@ -29,7 +30,8 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp">
+                    android:layout_marginLeft="5dp"
+                    android:textColorHint="@color/colorGrey">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/textInputName"
@@ -57,7 +59,8 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp">
+                android:layout_marginLeft="5dp"
+                android:textColorHint="@color/colorGrey">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textInputPhone"
@@ -83,6 +86,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
+                    android:textColorHint="@color/colorGrey"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/textInputEmail"
@@ -107,6 +111,7 @@
                     android:src="@drawable/icono_password"/>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:textColorHint="@color/colorGrey"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
